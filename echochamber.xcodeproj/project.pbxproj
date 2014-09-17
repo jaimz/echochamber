@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A32F66619B2829800287F83 /* FacebookConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A32F66519B2829800287F83 /* FacebookConnection.m */; };
 		1A6D9B0719A222BD00B84990 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6D9B0619A222BD00B84990 /* Foundation.framework */; };
 		1A6D9B0919A222BD00B84990 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6D9B0819A222BD00B84990 /* CoreGraphics.framework */; };
 		1A6D9B0B19A222BD00B84990 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6D9B0A19A222BD00B84990 /* UIKit.framework */; };
@@ -19,6 +20,17 @@
 		1A6D9B2219A222BE00B84990 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6D9B0A19A222BD00B84990 /* UIKit.framework */; };
 		1A6D9B2A19A222BE00B84990 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1A6D9B2819A222BE00B84990 /* InfoPlist.strings */; };
 		1A6D9B2C19A222BE00B84990 /* echochamberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6D9B2B19A222BE00B84990 /* echochamberTests.m */; };
+		1A6D9B3619A222FC00B84990 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6D9B3519A222FC00B84990 /* FacebookSDK.framework */; };
+		1A6D9B3919A2264E00B84990 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6D9B3819A2264E00B84990 /* LoginViewController.m */; };
+		1A6D9B4119A3D26E00B84990 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6D9B3F19A3D26E00B84990 /* MainViewController.m */; };
+		1A6D9B4219A3D26E00B84990 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6D9B4019A3D26E00B84990 /* MainViewController.xib */; };
+		1AD5418819A5006C00F6C050 /* AnimatedLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD5418719A5006C00F6C050 /* AnimatedLoginButton.m */; };
+		1AE403E219B9ADC100F7459E /* liverpool_fog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AE403E119B9ADC100F7459E /* liverpool_fog.jpg */; };
+		1AE403E419BEF00B00F7459E /* liverpool_fog_vblur.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AE403E319BEF00B00F7459E /* liverpool_fog_vblur.jpg */; };
+		1AE403EA19C0C8E900F7459E /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE403E819C0C8E900F7459E /* StoryViewController.m */; };
+		1AE403EB19C0C8E900F7459E /* StoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE403E919C0C8E900F7459E /* StoryViewController.xib */; };
+		1AE403F019C0F5D400F7459E /* PostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE403EF19C0F5D400F7459E /* PostView.m */; };
+		8FC578DD8C734FD2B013006B /* libPods-echochamber.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 448DC8CCEF9B41E58A0763C8 /* libPods-echochamber.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A32F66419B2829800287F83 /* FacebookConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookConnection.h; sourceTree = "<group>"; };
+		1A32F66519B2829800287F83 /* FacebookConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookConnection.m; sourceTree = "<group>"; };
 		1A6D9B0319A222BD00B84990 /* echochamber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = echochamber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A6D9B0619A222BD00B84990 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1A6D9B0819A222BD00B84990 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,6 +62,23 @@
 		1A6D9B2719A222BE00B84990 /* echochamberTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "echochamberTests-Info.plist"; sourceTree = "<group>"; };
 		1A6D9B2919A222BE00B84990 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1A6D9B2B19A222BE00B84990 /* echochamberTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = echochamberTests.m; sourceTree = "<group>"; };
+		1A6D9B3519A222FC00B84990 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		1A6D9B3719A2264E00B84990 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		1A6D9B3819A2264E00B84990 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		1A6D9B3E19A3D26E00B84990 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		1A6D9B3F19A3D26E00B84990 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		1A6D9B4019A3D26E00B84990 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		1AD5418619A5006C00F6C050 /* AnimatedLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedLoginButton.h; sourceTree = "<group>"; };
+		1AD5418719A5006C00F6C050 /* AnimatedLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedLoginButton.m; sourceTree = "<group>"; };
+		1AE403E119B9ADC100F7459E /* liverpool_fog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = liverpool_fog.jpg; sourceTree = "<group>"; };
+		1AE403E319BEF00B00F7459E /* liverpool_fog_vblur.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = liverpool_fog_vblur.jpg; sourceTree = "<group>"; };
+		1AE403E719C0C8E900F7459E /* StoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryViewController.h; sourceTree = "<group>"; };
+		1AE403E819C0C8E900F7459E /* StoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryViewController.m; sourceTree = "<group>"; };
+		1AE403E919C0C8E900F7459E /* StoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoryViewController.xib; sourceTree = "<group>"; };
+		1AE403EE19C0F5D400F7459E /* PostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostView.h; sourceTree = "<group>"; };
+		1AE403EF19C0F5D400F7459E /* PostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostView.m; sourceTree = "<group>"; };
+		3087F1675C514E52BDE15F47 /* Pods-echochamber.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-echochamber.xcconfig"; path = "Pods/Pods-echochamber.xcconfig"; sourceTree = "<group>"; };
+		448DC8CCEF9B41E58A0763C8 /* libPods-echochamber.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-echochamber.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +87,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A6D9B0919A222BD00B84990 /* CoreGraphics.framework in Frameworks */,
+				1A6D9B3619A222FC00B84990 /* FacebookSDK.framework in Frameworks */,
 				1A6D9B0B19A222BD00B84990 /* UIKit.framework in Frameworks */,
 				1A6D9B0719A222BD00B84990 /* Foundation.framework in Frameworks */,
+				8FC578DD8C734FD2B013006B /* libPods-echochamber.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +114,7 @@
 				1A6D9B2519A222BE00B84990 /* echochamberTests */,
 				1A6D9B0519A222BD00B84990 /* Frameworks */,
 				1A6D9B0419A222BD00B84990 /* Products */,
+				3087F1675C514E52BDE15F47 /* Pods-echochamber.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,10 +130,12 @@
 		1A6D9B0519A222BD00B84990 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1A6D9B3519A222FC00B84990 /* FacebookSDK.framework */,
 				1A6D9B0619A222BD00B84990 /* Foundation.framework */,
 				1A6D9B0819A222BD00B84990 /* CoreGraphics.framework */,
 				1A6D9B0A19A222BD00B84990 /* UIKit.framework */,
 				1A6D9B1F19A222BE00B84990 /* XCTest.framework */,
+				448DC8CCEF9B41E58A0763C8 /* libPods-echochamber.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,10 +143,26 @@
 		1A6D9B0C19A222BD00B84990 /* echochamber */ = {
 			isa = PBXGroup;
 			children = (
+				1AE403E319BEF00B00F7459E /* liverpool_fog_vblur.jpg */,
+				1AE403E119B9ADC100F7459E /* liverpool_fog.jpg */,
 				1A6D9B1519A222BD00B84990 /* AppDelegate.h */,
 				1A6D9B1619A222BD00B84990 /* AppDelegate.m */,
+				1A32F66419B2829800287F83 /* FacebookConnection.h */,
+				1A32F66519B2829800287F83 /* FacebookConnection.m */,
 				1A6D9B1819A222BD00B84990 /* Images.xcassets */,
 				1A6D9B0D19A222BD00B84990 /* Supporting Files */,
+				1A6D9B3719A2264E00B84990 /* LoginViewController.h */,
+				1A6D9B3819A2264E00B84990 /* LoginViewController.m */,
+				1A6D9B3E19A3D26E00B84990 /* MainViewController.h */,
+				1A6D9B3F19A3D26E00B84990 /* MainViewController.m */,
+				1A6D9B4019A3D26E00B84990 /* MainViewController.xib */,
+				1AD5418619A5006C00F6C050 /* AnimatedLoginButton.h */,
+				1AD5418719A5006C00F6C050 /* AnimatedLoginButton.m */,
+				1AE403E719C0C8E900F7459E /* StoryViewController.h */,
+				1AE403E819C0C8E900F7459E /* StoryViewController.m */,
+				1AE403E919C0C8E900F7459E /* StoryViewController.xib */,
+				1AE403EE19C0F5D400F7459E /* PostView.h */,
+				1AE403EF19C0F5D400F7459E /* PostView.m */,
 			);
 			path = echochamber;
 			sourceTree = "<group>";
@@ -151,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A6D9B2F19A222BE00B84990 /* Build configuration list for PBXNativeTarget "echochamber" */;
 			buildPhases = (
+				0F45E406998A4811A7FC40C2 /* Check Pods Manifest.lock */,
 				1A6D9AFF19A222BD00B84990 /* Sources */,
 				1A6D9B0019A222BD00B84990 /* Frameworks */,
 				1A6D9B0119A222BD00B84990 /* Resources */,
+				73DF96B42DF540EE9EBED89B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,7 +274,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A6D9B1119A222BD00B84990 /* InfoPlist.strings in Resources */,
+				1AE403E419BEF00B00F7459E /* liverpool_fog_vblur.jpg in Resources */,
+				1AE403EB19C0C8E900F7459E /* StoryViewController.xib in Resources */,
+				1A6D9B4219A3D26E00B84990 /* MainViewController.xib in Resources */,
 				1A6D9B1919A222BD00B84990 /* Images.xcassets in Resources */,
+				1AE403E219B9ADC100F7459E /* liverpool_fog.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,13 +292,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F45E406998A4811A7FC40C2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		73DF96B42DF540EE9EBED89B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-echochamber-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1A6D9AFF19A222BD00B84990 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1A6D9B1719A222BD00B84990 /* AppDelegate.m in Sources */,
+				1AE403EA19C0C8E900F7459E /* StoryViewController.m in Sources */,
+				1AD5418819A5006C00F6C050 /* AnimatedLoginButton.m in Sources */,
 				1A6D9B1319A222BD00B84990 /* main.m in Sources */,
+				1A6D9B3919A2264E00B84990 /* LoginViewController.m in Sources */,
+				1A6D9B4119A3D26E00B84990 /* MainViewController.m in Sources */,
+				1AE403F019C0F5D400F7459E /* PostView.m in Sources */,
+				1A32F66619B2829800287F83 /* FacebookConnection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,9 +453,14 @@
 		};
 		1A6D9B3019A222BE00B84990 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3087F1675C514E52BDE15F47 /* Pods-echochamber.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/james/Documents/FacebookSDK,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "echochamber/echochamber-Prefix.pch";
 				INFOPLIST_FILE = "echochamber/echochamber-Info.plist";
@@ -369,9 +471,14 @@
 		};
 		1A6D9B3119A222BE00B84990 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3087F1675C514E52BDE15F47 /* Pods-echochamber.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/james/Documents/FacebookSDK,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "echochamber/echochamber-Prefix.pch";
 				INFOPLIST_FILE = "echochamber/echochamber-Info.plist";
@@ -439,6 +546,7 @@
 				1A6D9B3119A222BE00B84990 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1A6D9B3219A222BE00B84990 /* Build configuration list for PBXNativeTarget "echochamberTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +555,7 @@
 				1A6D9B3419A222BE00B84990 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

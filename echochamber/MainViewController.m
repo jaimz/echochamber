@@ -48,16 +48,33 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+  [super viewDidLoad];
   [self.view.layer setContents:(__bridge id)([UIImage imageNamed:@"liverpool_fog_vblur.jpg"]).CGImage];
   _errorVisible = NO;
   CGPoint topCenter = CGPointMake(0.5, 0);
   self.errorBanner.layer.anchorPoint = topCenter;
+  
+  CGRect ourFrame = self.view.frame;
+  
+  self.toolbarBacking = [[UIView alloc] init];
+  [self.toolbarBacking.layer setFrame:CGRectMake(0.0, 0.0, 320, 0.0)];
+  self.toolbarBacking.layer.backgroundColor = [[UIColor colorWithRed:1 green:1 blue:1 alpha:0.6] CGColor];
   self.toolbarBacking.layer.anchorPoint = topCenter;
-  self.toolbarBacking.layer.shadowColor = [UIColor colorWithRed:0.173 green:0.173 blue:0.153 alpha:1.000].CGColor;
+  self.toolbarBacking.layer.shadowColor = [UIColor colorWithRed:0.173 green:0.173 blue:0.153 alpha:0.70].CGColor;
   self.toolbarBacking.layer.shadowOffset = CGSizeMake(0, 1);
   self.toolbarBacking.layer.shadowOpacity = 1;
   self.toolbarBacking.layer.shadowRadius = 0;
+  
+  /*
+  self.loginView = [[AnimatedLoginButton alloc] init];
+  [self.loginView.layer setFrame:CGRectMake(16, (ourFrame.size.height / 2) - 25, ourFrame.size.width - 32, 50)];
+  [self.loginView addTarget:self
+                     action:@selector(loginButtonTouched:)
+           forControlEvents:UIControlEventTouchUpInside];
+  */
+  
+  [self.view addSubview:self.toolbarBacking];
+  [self.view addSubview:self.loginView];
   
   AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
   NSNotificationCenter *notifications = appDelegate.facebook.notifications;
@@ -71,6 +88,9 @@
     if (_errorVisible)
       [self hideError];
     
+//    [self moveLoginButtonToTop];
+  }
+  else if ([name isEqualToString:kFBDidGetUserImage]) {
     [self moveLoginButtonToTop];
   }
   else if ([name isEqualToString:kFBErroredUserInfo]) {
@@ -132,6 +152,10 @@
   POPSpringAnimation *posnAnim = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
   posnAnim.toValue = [NSValue valueWithCGPoint:targetPosn];
   posnAnim.springBounciness = 4;
+  
+  posnAnim.completionBlock = ^(POPAnimation *anim, BOOL finished) {
+    [self.loginView toggleBubblePath];
+  };
 
   
   CGRect tbBounds = self.toolbarBacking.layer.bounds;
@@ -146,16 +170,20 @@
 }
 
 - (IBAction)logoutButtonTapped:(id)sender {
-//  AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-//  [appDelegate.facebook logout];
+  AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+  [appDelegate.facebook logout];
   
-  [self moveLoginButtonToTop];
+//  [self moveLoginButtonToTop];
 }
 
 - (IBAction)loginButtonTouched:(id)sender
 {
-  AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-  [appDelegate.facebook login];
+//  AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+  //[appDelegate.facebook login];
+  
+  // Used for demo purposes - we know that we are already logged into facebook
+  // and we still want to capture the initial state of the button.
+//  [appDelegate.facebook open];
 }
 
 - (void)didReceiveMemoryWarning

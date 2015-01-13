@@ -30,6 +30,7 @@
 		1AE403EA19C0C8E900F7459E /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE403E819C0C8E900F7459E /* StoryViewController.m */; };
 		1AE403EB19C0C8E900F7459E /* StoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE403E919C0C8E900F7459E /* StoryViewController.xib */; };
 		1AE403F019C0F5D400F7459E /* PostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE403EF19C0F5D400F7459E /* PostView.m */; };
+		1AE403F319CACEDD00F7459E /* BabbleParticipant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE403F219CACEDD00F7459E /* BabbleParticipant.m */; };
 		8FC578DD8C734FD2B013006B /* libPods-echochamber.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 448DC8CCEF9B41E58A0763C8 /* libPods-echochamber.a */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,8 @@
 		1AE403E919C0C8E900F7459E /* StoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoryViewController.xib; sourceTree = "<group>"; };
 		1AE403EE19C0F5D400F7459E /* PostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostView.h; sourceTree = "<group>"; };
 		1AE403EF19C0F5D400F7459E /* PostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostView.m; sourceTree = "<group>"; };
+		1AE403F119CACEDD00F7459E /* BabbleParticipant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabbleParticipant.h; sourceTree = "<group>"; };
+		1AE403F219CACEDD00F7459E /* BabbleParticipant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabbleParticipant.m; sourceTree = "<group>"; };
 		3087F1675C514E52BDE15F47 /* Pods-echochamber.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-echochamber.xcconfig"; path = "Pods/Pods-echochamber.xcconfig"; sourceTree = "<group>"; };
 		448DC8CCEF9B41E58A0763C8 /* libPods-echochamber.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-echochamber.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -163,6 +166,8 @@
 				1AE403E919C0C8E900F7459E /* StoryViewController.xib */,
 				1AE403EE19C0F5D400F7459E /* PostView.h */,
 				1AE403EF19C0F5D400F7459E /* PostView.m */,
+				1AE403F119CACEDD00F7459E /* BabbleParticipant.h */,
+				1AE403F219CACEDD00F7459E /* BabbleParticipant.m */,
 			);
 			path = echochamber;
 			sourceTree = "<group>";
@@ -337,6 +342,7 @@
 				1A6D9B3919A2264E00B84990 /* LoginViewController.m in Sources */,
 				1A6D9B4119A3D26E00B84990 /* MainViewController.m in Sources */,
 				1AE403F019C0F5D400F7459E /* PostView.m in Sources */,
+				1AE403F319CACEDD00F7459E /* BabbleParticipant.m in Sources */,
 				1A32F66619B2829800287F83 /* FacebookConnection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,7 +470,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "echochamber/echochamber-Prefix.pch";
 				INFOPLIST_FILE = "echochamber/echochamber-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -482,7 +490,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "echochamber/echochamber-Prefix.pch";
 				INFOPLIST_FILE = "echochamber/echochamber-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

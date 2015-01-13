@@ -202,7 +202,7 @@ static NSString *kLoginTitle = @"Log in with Facebook";
 }
 
 
--(void)toggleAvatarPath
+-(void)toggleBubblePath
 {
   _avatarPathIdx = 1 - _avatarPathIdx;
   CGPathRef path = ((UIBezierPath *)_avatarPaths[_avatarPathIdx]).CGPath;
@@ -250,7 +250,10 @@ static NSString *kLoginTitle = @"Log in with Facebook";
   NSString *name = notification.name;
   NSLog(@"%@", notification.name);
 
-  if ([name isEqualToString:kFBDidLogin]) {
+  if ([name isEqualToString:kFBWillLogin]) {
+    [self transitionToLoader:NO];
+  }
+  else if ([name isEqualToString:kFBDidLogin]) {
     if (_isLoading == NO)
       [self transitionToLoader:NO];
   }
@@ -281,7 +284,6 @@ static NSString *kLoginTitle = @"Log in with Facebook";
 - (void)doLogin
 {
   [self startPulse];
-  [((AppDelegate *)[UIApplication sharedApplication].delegate).facebook login];
 }
 
 - (void)doLogout
@@ -352,7 +354,7 @@ static NSString *kLoginTitle = @"Log in with Facebook";
   opacityAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
   opacityAnim.duration = 1;
   opacityAnim.completionBlock = ^(POPAnimation *anim, BOOL finished) {
-    [self toggleAvatarPath];
+//    [self toggleBubblePath];
   };
   
   [self.avatarMaskLayer pop_addAnimation:opacityAnim forKey:@"maskOpacity"];
@@ -398,7 +400,11 @@ static NSString *kLoginTitle = @"Log in with Facebook";
 {
   POPSpringAnimation *scaleAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
   scaleAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(1.0f, 1.0f)];
-  scaleAnimation.springBounciness = 18.0f;
+  scaleAnimation.springBounciness = 22.0f;
+  scaleAnimation.completionBlock = ^(POPAnimation *anim, BOOL finished) {
+    [((AppDelegate *)[UIApplication sharedApplication].delegate).facebook open];
+  };
+  
   [self.layer pop_addAnimation:scaleAnimation forKey:@"layerScaleSpringAnimation"];
 }
 
@@ -413,6 +419,8 @@ static NSString *kLoginTitle = @"Log in with Facebook";
 
 - (void)transitionToLoader:(BOOL)doLogin
 {
+  [self setTitle:@"" forState:UIControlStateNormal];
+  
   if (_isLoading)
     return;
 
@@ -431,15 +439,19 @@ static NSString *kLoginTitle = @"Log in with Facebook";
   toSquare.toValue = [NSValue valueWithCGSize:newSize];
   toSquare.duration = .6;
 
+  
   toSquare.completionBlock = ^(POPAnimation *anim, BOOL finished) {
     [self startPulse];
+    
     FacebookConnection *fb = ((AppDelegate *)[UIApplication sharedApplication].delegate).facebook;
     if (doLogin == YES) {
       [fb login];
     } else {
       [fb loadMyInfo];
     }
+    
   };
+  
 
 
   
@@ -492,7 +504,6 @@ static NSString *kLoginTitle = @"Log in with Facebook";
 
   _isThrobbing = YES;
 
-  [self setTitle:@"..." forState:UIControlStateNormal];
 
 
   self.layer.shadowColor = self.backgroundColor.CGColor;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
@@ -9,7 +9,6 @@
                 <outlet property="errorBanner" destination="Au5-4g-69s" id="HXD-lw-wBS"/>
                 <outlet property="loginView" destination="gVC-41-NWM" id="g7h-Om-dby"/>
                 <outlet property="logoutButton" destination="CTs-ft-h7p" id="wEi-px-deE"/>
-                <outlet property="toolbarBacking" destination="zmM-sL-Piy" id="g5e-fR-X7j"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,8 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Au5-4g-69s">
-                    <rect key="frame" x="0.0" y="20" width="320" height="0.0"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Au5-4g-69s">
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.69803923369999998" green="0.019607843829999999" blue="0.21176470820000001" alpha="0.28000000000000003" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.69803923369999998" green="0.019607843829999999" blue="0.21176470820000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -27,7 +25,7 @@
                     <color key="textColor" red="0.43226351351351355" green="0.0085170314306097505" blue="0.12743069463556905" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="highlightedColor" red="0.69803923369999998" green="0.019607843829999999" blue="0.21176470820000001" alpha="1" colorSpace="calibratedRGB"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTs-ft-h7p">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CTs-ft-h7p">
                     <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="0.14999999999999999" colorSpace="calibratedWhite"/>
@@ -38,14 +36,9 @@
                         <action selector="logoutButtonTapped:" destination="-1" eventType="touchUpInside" id="2BP-ZQ-Ljy"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zmM-sL-Piy">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="0.0"/>
+                <view contentMode="scaleToFill" id="gVC-41-NWM" customClass="AnimatedLoginButton">
+                    <rect key="frame" x="8" y="259" width="304" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gVC-41-NWM" customClass="AnimatedLoginButton">
-                    <rect key="frame" x="20" y="259" width="280" height="50"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="0.14999999999999999" colorSpace="calibratedWhite"/>
                     <color key="tintColor" red="0.32549020649999999" green="0.32549020649999999" blue="0.29019609089999998" alpha="1" colorSpace="calibratedRGB"/>
                     <accessibility key="accessibilityConfiguration" label="Login with Facebook">
@@ -57,8 +50,12 @@
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="189" y="423"/>
         </view>
     </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

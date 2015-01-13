@@ -35,14 +35,14 @@
   //[FBLoginView class];
   self.facebook = [[FacebookConnection alloc] init];
   
-//  self.window.rootViewController = [[MainViewController alloc] init];
-  self.window.rootViewController = [[StoryViewController alloc] init];
+  self.window.rootViewController = [[MainViewController alloc] init];
+//  self.window.rootViewController = [[StoryViewController alloc] init];
  
   self.window.backgroundColor = [UIColor whiteColor];
   [self.window makeKeyAndVisible];
   
- 
-  [self.facebook open];
+  // comment this out here for demo purposes
+  //[self.facebook open];
   
   return YES;
 }

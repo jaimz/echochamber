@@ -10,4 +10,6 @@
 
 @interface AnimatedLoginButton : UIButton
 
+-(void)toggleBubblePath;
+
 @end
